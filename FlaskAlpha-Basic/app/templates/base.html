@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FlaskAlpha</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>FlaskAlpha</h2>
+    <ul>
+      <li><a href="{{ url_for('main.index') }}">Home</a></li>
+      <li><a href="{{ url_for('agent.agent_home') }}">Agent</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>
