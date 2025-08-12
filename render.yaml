@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: flaskalpha-basic
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -b 0.0.0.0:$PORT wsgi:app --workers 2
+    autoDeploy: true
+    healthCheckPath: /healthz
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: ENABLE_SECURITY_HEADERS
+        value: "true"
+      # Set this one in the Render dashboard to a real secret:
+      - key: SECRET_KEY
+        sync: false
