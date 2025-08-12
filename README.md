@@ -1,25 +1,20 @@
-# FlaskAlpha Template System
+# FlaskAlpha-Basic
 
-**FlaskAlpha** is a modular, scalable Flask app starter system built for rapid development of AI tools, SaaS platforms, dashboards, and personal projects. Each version of FlaskAlpha is a clean foundation with a focused feature set — perfect for customization, resale, or internal tooling.
+A minimal, production-ready Flask starter with app factory, blueprints, CORS, security headers, Prometheus metrics, tests, Docker, and CI.
 
----
+## Purpose
+Jumpstart new Flask services with consistent structure, tooling, and deployability.
 
-## 🐾 Available Templates
+## My Role
+Template author/maintainer. Use as a base for microservices or prototypes.
 
-| Template              | Features Included                                      | Status        |
-|-----------------------|--------------------------------------------------------|---------------|
-| **FlaskAlpha-Basic**  | Sidebar UI, route layout, Jinja templates              | ✅ Ready       |
-| **FlaskAlpha-Auth**   | Adds Google OAuth login, session management            | 🛠 In Progress |
-| **FlaskAlpha-Billing**| Adds Stripe billing (Checkout + Webhooks)              | 🛠 Planned     |
-| **FlaskAlpha-Pack**   | Adds Kanban task dashboard + file uploads              | 🛠 Planned     |
-| **FlaskAlpha-Pro**    | All features (auth, billing, dashboard, agents)        | 🛠 Planned     |
+## Technologies Used
+Flask · Gunicorn · python-dotenv · Flask-CORS · Flask-Talisman · Prometheus Exporter · Pytest · Ruff · Black · Docker · GitHub Actions
 
----
-
-## 🚀 Quick Start
-
-### 1. Clone the Repo
-
+## Local Dev (Crostini / Linux)
 ```bash
-git clone https://github.com/YOUR_USERNAME/FlaskAlpha-Basic.git
-cd FlaskAlpha-Basic
+cd /mnt/chromeos/removable/Chromeb_L/FlaskAlpha-Basic
+make install
+make dev
+# open http://localhost:8000
+
